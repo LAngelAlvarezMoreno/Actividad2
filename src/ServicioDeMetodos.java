@@ -1,4 +1,7 @@
+import javax.swing.*;
+import javax.swing.event.CaretListener;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ServicioDeMetodos
@@ -27,13 +30,11 @@ public class ServicioDeMetodos
     public ArrayList<Integer> LeerCalificaciones()
     {
         ArrayList<Integer> Calificaciones = new ArrayList<Integer>();
-
-        for (int i = 0; i<5; i++)
-        {
-            System.out.println("Dime la calificación " + (i + 1) + " : ");
-            Calificaciones.add(leer.nextInt());
-        }
-
+            for (int i = 0; i<5; i++)
+            {
+                System.out.println("Dime la calificación " + (i + 1) + " : ");
+                Calificaciones.add(leer.nextInt());
+            }
         return Calificaciones;
     }
 

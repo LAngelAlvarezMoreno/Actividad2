@@ -1,18 +1,34 @@
 import java.util.ArrayList;
 
 public class Main {
+
     public static void main(String[] args) {
-        ServicioDeMetodos servicioDeMetodos = new ServicioDeMetodos();
+        ServicioDeMetodos metodo = new ServicioDeMetodos();
         ArrayList<Integer> calificaciones = new ArrayList<>();
         double promedio=0;
         char calificacion='F';
         String nombre = "";
 
-        nombre = servicioDeMetodos.LeerNombre();
-        calificaciones =  servicioDeMetodos.LeerCalificaciones();
-        promedio = servicioDeMetodos.ObtenerPromedio(calificaciones);
-        calificacion = servicioDeMetodos.ObtenerCalificacion(promedio);
+        nombre = metodo.LeerNombre();
+        calificaciones = SolicitaCalificaciones();
+        if (!(calificaciones.isEmpty())){
+            promedio = metodo.ObtenerPromedio(calificaciones);
+            calificacion = metodo.ObtenerCalificacion(promedio);
 
-        servicioDeMetodos.ImprimirInformacion(nombre, calificaciones, promedio, calificacion);
+            metodo.ImprimirInformacion(nombre, calificaciones, promedio, calificacion);
+        }
+    }
+
+    private static ArrayList<Integer> SolicitaCalificaciones()
+    {
+        ServicioDeMetodos metodo = new ServicioDeMetodos();
+        try {
+           return  metodo.LeerCalificaciones();
+        }
+        catch (Exception ex)
+        {
+            System.out.println("Ingresa información valida. <<Solo números>> ");
+           return SolicitaCalificaciones();
+        }
     }
 }
