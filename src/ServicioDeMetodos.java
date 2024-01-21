@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -61,8 +62,10 @@ public class ServicioDeMetodos
         for (int i = 0; i < calificaciones.size(); i++) {
             System.out.println("Calificación " + (i+1) + " es: " + calificaciones.get(i));
         }
-        System.out.println("Tu promedio es: " + promedio);
+        System.out.println("Tu promedio es: " + formatoDecimal.format(promedio));
         System.out.println("Tu Calificación Final es: " + calificacion);
         System.out.println("***************************************************");
     }
+
+    private static final DecimalFormat formatoDecimal = new DecimalFormat("0.00");
 }
