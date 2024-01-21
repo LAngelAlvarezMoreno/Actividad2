@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         ServicioDeMetodos metodo = new ServicioDeMetodos();
-        ArrayList<Integer> calificaciones = new ArrayList<>();
-        double promedio=0;
-        char calificacion='F';
-        String nombre = "";
+        ArrayList<Integer> calificaciones;
+        float promedio;
+        char calificacion;
+        String nombre;
 
         nombre = metodo.LeerNombre();
         calificaciones = SolicitaCalificaciones();

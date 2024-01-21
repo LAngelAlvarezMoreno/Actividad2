@@ -1,26 +1,23 @@
-import javax.swing.*;
-import javax.swing.event.CaretListener;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ServicioDeMetodos
 {
     Scanner leer = new Scanner(System.in);
-    public double ObtenerPromedio(ArrayList<Integer> calificaciones)
+    public float ObtenerPromedio(ArrayList<Integer> calificaciones)
     {
-        double result = 0;
+        float result;
 
         int suma = calificaciones.stream().mapToInt(item -> item).sum();
 
-        result = suma / 5;
+        result = (float) suma / 5;
 
         return  result;
     }
 
     public String LeerNombre()
     {
-        String Nombre = "";
+        String Nombre;
 
         System.out.println("Dime tu nombre: ");
         Nombre = leer.nextLine();
@@ -29,7 +26,7 @@ public class ServicioDeMetodos
     }
     public ArrayList<Integer> LeerCalificaciones()
     {
-        ArrayList<Integer> Calificaciones = new ArrayList<Integer>();
+        ArrayList<Integer> Calificaciones = new ArrayList<>();
             for (int i = 0; i<5; i++)
             {
                 System.out.println("Dime la calificación " + (i + 1) + " : ");
