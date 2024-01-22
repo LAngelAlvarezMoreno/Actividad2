@@ -5,6 +5,12 @@ import java.util.Scanner;
 public class ServicioDeMetodos
 {
     Scanner leer = new Scanner(System.in);
+
+    /**
+     *
+     * @param calificaciones para calcular el promedio,
+     * @return -> result con el dato del promedio obtenido.
+     */
     public float ObtenerPromedio(ArrayList<Integer> calificaciones)
     {
         float result;
@@ -12,10 +18,17 @@ public class ServicioDeMetodos
         int suma = calificaciones.stream().mapToInt(item -> item).sum();
 
         result = (float) suma / 5;
+//        para este ejemplo nos pide el promedio sobre 5 calificacione
+//           por eso le definimos el 5 directamente... en caso de tener mas de 5 calificaciones ingresadas; podemos realizar la siguiente forma
+//         result = (float) suma / calificaciones.calificaciones.size();
 
         return  result;
     }
 
+    /**
+     * solicitamos nombre y lo almancenamos.
+     * @return nombre capturado en variable -> Nombre
+     */
     public String LeerNombre()
     {
         String Nombre;
@@ -25,6 +38,11 @@ public class ServicioDeMetodos
 
         return Nombre;
     }
+
+    /**
+     * leemos las calificaciones y las almacenamos en variable -> Calificaciones
+     * @return lista de calificaciones.
+     */
     public ArrayList<Integer> LeerCalificaciones()
     {
         ArrayList<Integer> Calificaciones = new ArrayList<>();
@@ -36,6 +54,12 @@ public class ServicioDeMetodos
         return Calificaciones;
     }
 
+    /**
+     * Recibimos en parametro el promedio de las calificaciones que se ingresaron para definicer la Calificacion de acuerdo a la
+     * tabla definida previamente
+     *  @param promedio
+     * @return -> Calificacion
+     */
     public char ObtenerCalificacion(double promedio)
     {
         char Calificacion = 'F';
@@ -55,6 +79,13 @@ public class ServicioDeMetodos
         return Calificacion;
     }
 
+    /**
+     * metodo para imprimir en pantalla la informacion recabada.
+     * @param nombre es el que solicitamos que escribieran
+     * @param calificaciones lista con las 5 calificaciones solicitadas
+     * @param promedio resultado al promediar las calificaciones obtenidas
+     * @param calificacion obtenida al validar con la tabla previamente definida.
+     */
     public void ImprimirInformacion(String nombre, ArrayList<Integer> calificaciones, double promedio, char calificacion)
     {
         System.out.println("***************************************************");

@@ -9,16 +9,20 @@ public class Main {
         char calificacion;
         String nombre;
 
-        nombre = metodo.LeerNombre();
-        calificaciones = SolicitaCalificaciones();
+        nombre = metodo.LeerNombre(); //solicitamos nombre.
+        calificaciones = SolicitaCalificaciones(); //solicitamos calificaciones.
         if (!(calificaciones.isEmpty())){
-            promedio = metodo.ObtenerPromedio(calificaciones);
-            calificacion = metodo.ObtenerCalificacion(promedio);
+            promedio = metodo.ObtenerPromedio(calificaciones);  //obtenemos el promedio a partir de las calificaciones solicitadas.
+            calificacion = metodo.ObtenerCalificacion(promedio); //definidmos la Calificacion a partir del promedio obtenido.
 
-            metodo.ImprimirInformacion(nombre, calificaciones, promedio, calificacion);
+            metodo.ImprimirInformacion(nombre, calificaciones, promedio, calificacion);//mostramos en pantalla los datos recabados.
         }
     }
 
+    /**
+     * metodo para leer las calificaciones e indicar que solo puede ingresar valores numericos.
+     * @return lista de calificaciones solicitada
+     */
     private static ArrayList<Integer> SolicitaCalificaciones()
     {
         ServicioDeMetodos metodo = new ServicioDeMetodos();
