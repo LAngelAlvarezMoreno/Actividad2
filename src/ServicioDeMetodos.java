@@ -57,7 +57,7 @@ public class ServicioDeMetodos
     /**
      * Recibimos en parametro el promedio de las calificaciones que se ingresaron para definicer la Calificacion de acuerdo a la
      * tabla definida previamente
-     *  @param promedio
+     *  @param promedio para poder definir la calificacion.
      * @return -> Calificacion
      */
     public char ObtenerCalificacion(double promedio)
