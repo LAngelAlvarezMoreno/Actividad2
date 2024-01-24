@@ -7,7 +7,7 @@ public class ServicioDeMetodos
     Scanner leer = new Scanner(System.in);
 
     /**
-     *
+     *metodo para realizar el promedio
      * @param calificaciones para calcular el promedio,
      * @return -> result con el dato del promedio obtenido.
      */
@@ -20,7 +20,7 @@ public class ServicioDeMetodos
         result = (float) suma / 5;
 //        para este ejemplo nos pide el promedio sobre 5 calificacione
 //           por eso le definimos el 5 directamente... en caso de tener mas de 5 calificaciones ingresadas; podemos realizar la siguiente forma
-//         result = (float) suma / calificaciones.calificaciones.size();
+//         result = (float) suma / calificaciones.size();
 
         return  result;
     }

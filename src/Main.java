@@ -31,7 +31,7 @@ public class Main {
         }
         catch (Exception ex)
         {
-            System.out.println("Ingresa información valida. <<Solo números>> ");
+            System.out.println("Ingresa información valida. <<Solo números>> " + ex.getMessage());
            return SolicitaCalificaciones();
         }
     }
